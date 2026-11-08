@@ -69,7 +69,8 @@ def chat_endpoint(request: ChatRequest):
         response = client.chat.completions.create(
             model="qwen/qwen3.8-27b",
             messages=formatted_messages,
-            temperature=0.3,
+            temperature=0.2,
+            max_tokens=650,
         )
         return {"reply": response.choices[0].message.content}
     except Exception as e:
