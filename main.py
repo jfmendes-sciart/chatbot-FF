@@ -67,7 +67,7 @@ def chat_endpoint(request: ChatRequest):
             formatted_messages.append({"role": msg.role, "content": msg.content})
 
         response = client.chat.completions.create(
-            model="llama3-8b-8192",
+            model="llama-3.2-3b-preview",
             messages=formatted_messages,
             temperature=0.3,
         )
