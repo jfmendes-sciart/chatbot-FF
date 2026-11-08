@@ -1,3 +1,4 @@
+import os
 # No início do main.py:
 api_key = os.getenv("GROQ_API_KEY")
 if not api_key:
