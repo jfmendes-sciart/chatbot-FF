@@ -96,8 +96,8 @@
                     appendMessage('bot', data.reply);
                     history.push({ role: 'assistant', content: data.reply });
                 } else {
-                    appendMessage('bot', 'Erro: não foi possível obter uma resposta.');
-                }
+                 appendMessage('bot', 'Erro do servidor: ' + (data.detail || JSON.stringify(data)));
+             }
             } catch (err) {
                 const l = document.getElementById('loading');
                 if (l) l.remove();
